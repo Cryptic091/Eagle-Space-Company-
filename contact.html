@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Eagle Space Company</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">ESC</a>
+            <ul>
+                <li><a href="index.html">ACCUEIL</a></li>
+                <li><a href="galerie.html">GALERIE</a></li>
+                <li><a href="direction.html">MEMBRE ESC</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h3>Support Joueur</h3>
+                    <ul class="contact-features">
+                        <li>Assistance Technique</li>
+                        <li>Support Discord</li>
+                        <li>FAQ & Guides</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h3>Communauté</h3>
+                    <ul class="contact-features">
+                        <li><a href="https://robertsspaceindustries.com" target="_blank">Star Citzen France</a></li>
+                        <li><a href="https://www.twitch.tv/eagle_space_company" target="_blank">Twitch</a></li>
+                        <li><a href="https://www.youtube.com/@eagle_space_company" target="_blank">Youtube</a></li>
+                        <li><a href="https://discord.gg/rW6b7fqqQf" target="_blank">Discord</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Envoyez-nous un message</h3>
+            <form action="php/process_discord.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="pseudo" placeholder="Votre pseudo en jeu" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <select name="sujet" required>
+                        <option value="" disabled selected>Sujet</option>
+                        <option value="bug">Signalement de Bug</option>
+                        <option value="gameplay">Question de Gameplay</option>
+                        <option value="technique">Problème Technique</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="primary-btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="protection.js"></script>
+</body>
+</html>
